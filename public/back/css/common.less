@@ -1,7 +1,120 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active{
+  text-decoration: none;
+}
+
+.red{
+  color:red;
+}
 .body-bg{
   background: #222D32;
 }
 
 .mt-150{
   margin-top: 150px;
+}
+
+.lt-aside{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 180px;
+  height: 100%;
+  z-index: 99;
+  transition: left 0.5s;
+  h4{
+    background-color: #367FA9;
+    height: 50px;
+    line-height: 50px;
+    color: white;
+    font-size: 24px;
+    margin: 0;
+  }
+  .info{
+    text-align: center;
+    img{
+      width: 100px;
+      border-radius: 50%;
+      margin: 20px 0;
+    }
+    p{
+      color: #fff;
+      font-size: 18px;
+    }
+  }
+  >ul{
+    margin-top: 40px;
+    li{
+      a{
+        display: block;
+        color: #fff;
+        padding-left: 43px;
+        line-height: 40px;
+        font-size: 16px;
+      }
+      .second{
+        display: none;
+        // margin-top: 0;
+        a{
+          padding-left: 80px;
+        }
+      }
+    }
+    .current{
+      a{
+        background-color: black;
+        border-left: 3px solid #069;
+      }
+      
+    }
+  }
+}
+
+.lt-main{
+  padding-left: 180px;
+  height: 1000px;
+  transition: padding 0.5s;
+  .topbar{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 50px;
+    width: 100%;
+    background-color: skyblue;
+    padding-left: 180px;
+    transition: padding 0.5s;
+
+    a{
+      color:white;
+      font-size: 30px;
+      line-height: 50px;
+      padding: 0 10px
+    }
+  }
+
+  .content{
+    padding: 60px 10px 10px 10px;
+  }
+}
+
+
+// 侧边栏隐藏类名
+body.hidemenu{
+  .lt-aside{
+    left:-180px;
+  }
+  .lt-main{
+    padding-left: 0;
+    .topbar{
+      padding-left: 0;
+    }
+  }
 }

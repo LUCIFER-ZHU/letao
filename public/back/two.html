@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>首页</title>
+  <title>二级</title>
   <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="./lib/nprogress/nprogress.css">
   <link rel="stylesheet" href="./css/common.css">
@@ -19,9 +19,9 @@
       <li><a href="user.html"><span class="glyphicon glyphicon-user"></span>用户管理</a></li>
       <li>
         <a href="#" class="cate-link"><span class="glyphicon glyphicon-th-large"></span>分类管理</a>
-        <ul class="second">
+        <ul class="second show">
           <li><a href="one.html">一级导航</a></li>
-          <li><a href="two.html">二级导航</a></li>
+          <li class="current"><a href="two.html" >二级导航</a></li>
         </ul>
       </li>
       <li><a href="product.html"><span class="glyphicon glyphicon-lock"></span>商品管理</a></li>
@@ -37,20 +37,8 @@
       <!-- 面包屑导航 -->
       <ol class="breadcrumb">        
         <li><a href="#">管理系统</a></li>
-        <li class="active">首页</li>
+        <li class="active">二级导航</li>
       </ol>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-6">
-              <!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
-              <div id="chart1" style="height:400px;"></div>
-          </div>
-          <div class="col-sm-6">
-              <!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
-              <div id="chart2" style="height:400px;"></div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 
@@ -76,7 +64,6 @@
   <script src="./lib/jquery/jquery.min.js"></script>
   <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
   <script src="./lib/nprogress/nprogress.js"></script>
-  <script src="./lib/echarts/echarts.min.js"></script>
   <script src="./js/isLogin.js"></script>
   <script src="./js/common.js"></script>
   <script src="./js/index.js"></script>

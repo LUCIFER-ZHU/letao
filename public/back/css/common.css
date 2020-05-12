@@ -1,6 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+.red {
+  color: red;
+}
 .body-bg {
   background: #222D32;
 }
 .mt-150 {
   margin-top: 150px;
+}
+.lt-aside {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 180px;
+  height: 100%;
+  z-index: 99;
+  transition: left 0.5s;
+}
+.lt-aside h4 {
+  background-color: #367FA9;
+  height: 50px;
+  line-height: 50px;
+  color: white;
+  font-size: 24px;
+  margin: 0;
+}
+.lt-aside .info {
+  text-align: center;
+}
+.lt-aside .info img {
+  width: 100px;
+  border-radius: 50%;
+  margin: 20px 0;
+}
+.lt-aside .info p {
+  color: #fff;
+  font-size: 18px;
+}
+.lt-aside > ul {
+  margin-top: 40px;
+}
+.lt-aside > ul li a {
+  display: block;
+  color: #fff;
+  padding-left: 43px;
+  line-height: 40px;
+  font-size: 16px;
+}
+.lt-aside > ul li .second {
+  display: none;
+}
+.lt-aside > ul li .second a {
+  padding-left: 80px;
+}
+.lt-aside > ul .current a {
+  background-color: black;
+  border-left: 3px solid #069;
+}
+.lt-main {
+  padding-left: 180px;
+  height: 1000px;
+  transition: padding 0.5s;
+}
+.lt-main .topbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 50px;
+  width: 100%;
+  background-color: skyblue;
+  padding-left: 180px;
+  transition: padding 0.5s;
+}
+.lt-main .topbar a {
+  color: white;
+  font-size: 30px;
+  line-height: 50px;
+  padding: 0 10px;
+}
+.lt-main .content {
+  padding: 60px 10px 10px 10px;
+}
+body.hidemenu .lt-aside {
+  left: -180px;
+}
+body.hidemenu .lt-main {
+  padding-left: 0;
+}
+body.hidemenu .lt-main .topbar {
+  padding-left: 0;
 }
