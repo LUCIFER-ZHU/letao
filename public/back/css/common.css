@@ -12,6 +12,12 @@ a:active {
 .red {
   color: red;
 }
+thead th {
+  text-align: center;
+}
+.table > tbody > tr > td {
+  vertical-align: middle;
+}
 .body-bg {
   background: #222D32;
 }
