@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>一级</title>
   <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./lib/bootstrap-validator/css/bootstrapValidator.min.css">
   <link rel="stylesheet" href="./lib/nprogress/nprogress.css">
   <link rel="stylesheet" href="./css/common.css">
 </head>
+
 <body>
   <div class="lt-aside body-bg">
     <h4 class="text-center">商城</h4>
@@ -20,7 +23,7 @@
       <li>
         <a href="#" class="cate-link"><span class="glyphicon glyphicon-th-large"></span>分类管理</a>
         <ul class="second show">
-          <li class="current"><a href="one.html" >一级导航</a></li>
+          <li class="current"><a href="one.html">一级导航</a></li>
           <li><a href="two.html">二级导航</a></li>
         </ul>
       </li>
@@ -31,23 +34,54 @@
   <div class="lt-main">
     <div class="topbar">
       <a href="#" class="menu pull-left"><span class="glyphicon glyphicon-list-alt"></span></a>
-      <a href="#" class="loginout pull-right" data-toggle="modal" data-target=".modal-logout"><span class="glyphicon glyphicon-share"></span></a>
+      <a href="#" class="loginout pull-right" data-toggle="modal" data-target=".modal-logout"><span
+          class="glyphicon glyphicon-share"></span></a>
     </div>
     <div class="content">
       <!-- 面包屑导航 -->
-      <ol class="breadcrumb">        
+      <ol class="breadcrumb">
         <li><a href="#">管理系统</a></li>
         <li class="active">一级导航</li>
       </ol>
+
+      <div>
+        <button class="btn btn-default" data-toggle="modal" data-target=".modal-add">添加分类</button>
+
+        <table class="table table-bordered table-hover mt-30 text-center">
+          <thead>
+            <tr>
+              <th>序号</th>
+              <th>一级分类名称</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>111</td>
+              <td>222</td>
+            </tr>
+            <tr>
+              <td>111</td>
+              <td>222</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- 分页容器 -->
+        <div class="pull-right">
+          <ul id="pagintor"></ul>
+        </div>
+      </div>
+
     </div>
   </div>
 
-  <!-- 模态框 -->
+  <!-- 退出模态框 -->
   <div class="modal fade modal-logout" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-sm" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">&times;</span></button>
           <h4 class="modal-title">温馨提示：</h4>
         </div>
         <div class="modal-body">
@@ -61,11 +95,50 @@
     </div><!-- /.modal-dialog -->
   </div><!-- /.modal -->
 
+  <!-- 添加一级分类模态框 -->
+  <div class="modal fade modal-add" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">添加一级分类：</h4>
+        </div>
+        <div class="modal-body">
+          <form id="form1">
+            <div class="form-group">
+              <input type="text" name="categoryName" class="form-control" placeholder="请输出一级分类">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+          <!-- 表单form属性 指定表单域 -->
+          <button type="submit" form="form1" class="btn btn-primary btn-add">添加</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+  <!-- 模版 -->
+  <script type="text/html" id="tmp">
+    {{each rows v i}}
+    <tr>
+      <td>{{ (page-1) * size + i + 1 }}</td>
+      <td>{{v.categoryName}}</td>
+    </tr>
+    {{/each}}
+  </script>
+
+  <script src="./lib/artTemplate/template-web.js"></script>
   <script src="./lib/jquery/jquery.min.js"></script>
   <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="./lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
+  <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
   <script src="./lib/nprogress/nprogress.js"></script>
   <script src="./js/isLogin.js"></script>
   <script src="./js/common.js"></script>
-  <script src="./js/index.js"></script>
+  <script src="./js/one.js"></script>
 </body>
+
 </html>
