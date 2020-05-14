@@ -53,7 +53,7 @@ $(function () {
       // 填充一级分类
       $('.dropdown-menu').html(template('tmp1', info));
     }
-  })
+  }) 
 
   // 4-点击下拉列表选项，获取选项的值，赋值按钮，并保存当前数据到隐藏域
   $('.cate-list').on('click', 'a', function () {
