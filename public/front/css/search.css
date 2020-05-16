@@ -1,0 +1,46 @@
+.lt-main {
+  padding: 10px;
+}
+.lt-main .search-box {
+  position: relative;
+}
+.lt-main .search-box .search-txt {
+  width: 100%;
+  height: 33px;
+  padding-right: 60px;
+  border: 1px solid skyblue;
+  background-color: snow;
+  border-radius: 5px 0 0 5px;
+  font-size: 14px;
+}
+.lt-main .search-box .search-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 60px;
+  height: 33px;
+  background-color: #8585f5;
+  color: white;
+  border: 1px solid skyblue;
+  border-radius: 0 5px 5px 0;
+}
+.lt-main .search-content .search-title a {
+  font-size: 14px;
+  color: #aaa;
+}
+.lt-main .search-content .search-title a span {
+  font-size: 14px;
+}
+.lt-main .search-content .search-list {
+  border: 1px dashed #000;
+  border-bottom: none;
+}
+.lt-main .search-content .search-list li {
+  line-height: 30px;
+  border-bottom: 1px dashed #000;
+  padding-left: 10px ;
+}
+.lt-main .search-content .search-list li a {
+  font-size: 15px;
+  color: #743f97;
+}

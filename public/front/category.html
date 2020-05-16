@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>分类页</title>
+  <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/category.css">
+</head>
+
+<body>
+  <div class="lt-layout">
+    <!-- 头部 -->
+    <div class="lt-header">
+      <a href="index.html" class="home mui-icon mui-icon-home"></a>
+      <h4>乐淘商城</h4>
+      <a href="search.html" class="search mui-icon mui-icon-search"></a>
+    </div>
+    <!-- 主体 -->
+    <div class="lt-main">
+      <div class="cate-nav">
+        <div class="mui-scroll-wrapper">
+          <div class="mui-scroll">
+            <ul class="nav-list">
+              <li class="current"><a href="#">运动馆</a></li>
+              <li><a href="#">运动馆</a></li>
+              <li><a href="#">运动馆</a></li>
+              <li><a href="#">运动馆</a></li>
+              <li><a href="#">运动馆</a></li>
+              <li><a href="#">运动馆</a></li>
+              <li><a href="#">运动馆</a></li>
+              <li><a href="#">运动馆</a></li>
+              <li><a href="#">运动馆</a></li>
+              <li><a href="#">运动馆</a></li>
+              <li><a href="#">运动馆</a></li>
+              <li><a href="#">运动馆</a></li>
+              <li><a href="#">运动馆</a></li>
+              <li><a href="#">运动馆</a></li>
+              <li><a href="#">运动馆</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="cate-content">
+        <div class="mui-scroll-wrapper">
+          <div class="mui-scroll">
+            <ul class="content-list">
+              <li>
+                <a href="#">
+                  <img src="./images/brand1.png" alt="">
+                  <p>耐克</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./images/brand1.png" alt="">
+                  <p>耐克</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./images/brand1.png" alt="">
+                  <p>耐克</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./images/brand1.png" alt="">
+                  <p>耐克</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./images/brand1.png" alt="">
+                  <p>耐克</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./images/brand1.png" alt="">
+                  <p>耐克</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 底部 -->
+    <div class="lt-footer">
+      <ul>
+        <li>
+          <a href="index.html">
+            <span class="mui-icon mui-icon-home"></span>
+            <span>首页</span>
+          </a>
+        </li>
+        <li class="current">
+          <a href="category.html">
+            <span class="mui-icon mui-icon-bars"></span>
+            <span>分类</span>
+          </a>
+        </li>
+        <li>
+          <a href="cart.html">
+            <span class="mui-icon mui-icon-paperplane"></span>
+            <span>购物车</span>
+          </a>
+        </li>
+        <li>
+          <a href="user.html">
+            <span class="mui-icon mui-icon-contact"></span>
+            <span>用户中心</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 一级分类模版 -->
+  <script type="text/html" id="tmp-one">
+    {{each rows v i}}
+
+        <li><a href="#" data-id={{ v.id }}>{{v.categoryName}}</a></li>
+
+    {{/each}}
+  </script>
+
+  <!-- 二级分类模版 -->
+  <script type="text/html" id="tmp-two">
+    {{each rows v i}}
+    <li>
+      <a href="#" data-id={{ v.id }}>
+        <img src={{ v.brandLogo }} alt="">
+        <p>{{ v.brandName }}</p>
+      </a>
+    </li>
+    {{/each}}
+  </script>
+
+  <script src="./lib/mui/js/mui.js"></script>
+  <script src="./lib/zepto/zepto.min.js"></script>
+  <script src="./lib/artTemplate/template-web.js"></script>
+  <script src="./js/common.js"></script>
+  <script src="./js/category.js"></script>
+</body>
+
+</html>

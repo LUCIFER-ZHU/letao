@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>搜索页</title>
+  <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/search.css">
+</head>
+
+<body>
+  <div class="lt-layout">
+    <!-- 头部 -->
+    <div class="lt-header">
+      <a href="javascript:history.go(-1);" class="back mui-icon mui-icon-back"></a>
+      <h4>搜索中心</h4>
+
+    </div>
+    <!-- 主 -->
+    <div class="lt-main">
+      <!-- 搜索框 -->
+      <div class="search-box">
+        <input type="search" class="search-txt mui-text-left" name="" id="" placeholder="请输出搜索关键字">
+        <button class="search-btn">搜索</button>
+      </div>
+
+      <!-- 搜索记录 -->
+      <div class="search-content">
+        <div class="search-title mui-clearfix">
+          <a href="#" class="mui-pull-left">搜索历史</a>
+          <a href="#" class="mui-pull-right  clear">
+            <span class="mui-icon mui-icon-trash"></span>
+            清空历史
+          </a>
+        </div>
+        <ul class="search-list">
+          <li class="mui-clearfix">
+            <a href="#" class="mui-pull-left">鞋子</a>
+            <span class="mui-icon mui-icon-closeempty mui-pull-right"></span>
+          </li>
+          <li class="mui-clearfix">
+            <a href="#" class="mui-pull-left">鞋子</a>
+            <span class="mui-icon mui-icon-closeempty mui-pull-right"></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- 底部 -->
+    <div class="lt-footer">
+      <ul>
+        <li>
+          <a href="index.html">
+            <span class="mui-icon mui-icon-home"></span>
+            <span>首页</span>
+          </a>
+        </li>
+        <li>
+          <a href="category.html">
+            <span class="mui-icon mui-icon-bars"></span>
+            <span>分类</span>
+          </a>
+        </li>
+        <li>
+          <a href="cart.html">
+            <span class="mui-icon mui-icon-paperplane"></span>
+            <span>购物车</span>
+          </a>
+        </li>
+        <li>
+          <a href="user.html">
+            <span class="mui-icon mui-icon-contact"></span>
+            <span>用户中心</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 模板 -->
+  <script type=text/html" id="tmp">
+    {{if list.length == 0}}
+    <p>没有搜索记录!</p>
+    {{else}}
+    <div class="search-title mui-clearfix">
+      <a href="#" class="mui-pull-left">搜索历史</a>
+      <a href="#" class="mui-pull-right clear">
+        <span class="mui-icon mui-icon-trash"></span>
+        清空历史
+      </a>
+    </div>
+    <ul class="search-list">
+      {{each list v i }}
+      <li class="mui-clearfix">
+        <a href="searchList.html?key={{v}}" class="mui-pull-left">{{ v }}</a>
+        <span class="del mui-icon mui-icon-closeempty mui-pull-right" data-id={{ i }}></span>
+      </li>
+      {{/each}}
+    </ul>
+    {{/if}}
+
+  </script>
+
+  <script src="./lib/mui/js/mui.js"></script>
+  <script src="./lib/zepto/zepto.min.js"></script>
+  <script src="./lib/artTemplate/template-web.js"></script>
+  <script src="./js/common.js"></script>
+  <script src="./js/search.js"></script>
+</body>
+
+</html>
